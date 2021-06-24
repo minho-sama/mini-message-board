@@ -1,8 +1,94 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+  margin: 20px 15px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: rgb(19, 19, 19);
+  color:white;
+}
 a {
   color: #00B7FF;
+}
+
+nav{
+  display:flex;
+  gap: 20px;
+  position: relative;
+}
+
+nav h1{
+  font-size: 30px;
+  color:rgb(255, 255, 255);
+}
+
+nav a{
+  padding: 8px;
+  background: rgb(43, 43, 43);
+  color:white;
+  border: none;
+  border-radius: 2px;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  position:absolute;
+  right: 10px;
+  transition: 0.2s color;
+  transition: 0.4s transform;
+}
+
+nav a:hover{
+  color: #00B7FF;
+  transform: translateX(2px)
+}
+
+#messages{
+  margin: 30px auto;
+  width: 100%;
+}
+
+#messages ul li{
+  margin: 20px auto;
+  list-style: none;
+  width: 60%;
+  padding:12px;
+  display:flex;
+  flex-direction: column;
+  gap: 25px;
+  background: rgb(43, 43, 43);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#messages ul li:hover{
+  transform: translateX(5px)
+}
+
+#messages ul li h3{
+  font-size: 13px;
+  color:#00B7FF;
+}
+#messages ul li p{
+  font-size: 15px;
+  text-align: justify;
+  border-left: 2px solid #00B7FF;
+  padding-left: 5px;
+}
+#messages ul li span{
+  position: absolute;
+  right: 10px;
+  color:rgb(162, 165, 168);
+}
+
+@media screen and (max-width: 800px) {
+  #messages ul li{
+    width: 95%;
+  }
 }

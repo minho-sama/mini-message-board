@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 20px 15px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: rgb(19, 19, 19);
+    color:white;
+}
+a {
+    color: #00B7FF;
+}
+  
+nav{
+    display:flex;
+    gap: 20px;
+    position: relative;
+}
+  
+  nav h1{
+    font-size: 30px;
+    color:rgb(255, 255, 255);
+  }
+  
+  #messages{
+    margin: 30px auto;
+    width: 100%;
+  }
+  
+form{
+    display:flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+    padding-bottom: 100px;
+    position:relative;
+}
+
+form label{
+    color: #00B7FF;
+    margin-bottom: 10px;
+}
+
+form input, textarea{
+    border: none;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+#error-list li{
+    list-style: none;
+    margin: 5px;
+    color:rgb(189, 3, 3);
+    border: 1px solid red;
+    padding: 1px;
+    border-radius: 1px;
+}
+
+#button-container{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#button-container a, button{
+    padding: 8px;
+    background: rgb(43, 43, 43);
+    color:white;
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    transition: 0.2s color;
+    transition: 0.4s transform;
+    margin-left: 20px;
+  }
+
+button{
+    bottom: 0;
+}
+
+#button-container a:hover, button:hover{
+    color: #00B7FF;
+    transform: translateY(2px)
+}
+
+@media screen and (min-width: 1200px) {
+    form{
+        width: 50%;
+        margin: 5% 25%;
+    }
+}
