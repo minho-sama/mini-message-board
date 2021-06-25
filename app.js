@@ -6,10 +6,11 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const dbkey = require('./secret')
 
 const app = express();
 const mongoose = require('mongoose');
-const dev_db_url = 'mongodb+srv://minh:735196Lili@message-board.por97.mongodb.net/board?retryWrites=true&w=majority'
+const dev_db_url = dbkey
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, { useNewUrlParser: true , useUnifiedTopology: true});
 const db = mongoose.connection;
