@@ -6,7 +6,7 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const dbkey = require('./secret')
+const dbkey = require('./secret/secret')
 
 const app = express();
 const mongoose = require('mongoose');
